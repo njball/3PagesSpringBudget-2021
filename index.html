@@ -19,7 +19,8 @@
             var visDescr2 = "How do these compare across the whole budget?";
             var visDataNotes_1 = "Stacked bar charts are a more conventional way of displaying such data, but are difficult to interpret when category headings are very long. This chart design was 100% inspired by one published by the NYTimes."
             var visDataNotes_2 = "https://www.nytimes.com/interactive/2017/11/15/us/politics/every-tax-cut-in-the-house-tax-bill.html. Data source: https://www.gov.uk/government/publications/budget-2021-documents/budget-2021-html ";
-        
+            var visDataNotes_3 = "The area of each square represents the total impact of the measure over the period FY2020-21 to FY2025-26.";
+
 			//Create the svg container for title
 			var svgTitleHeight = 50, svgTitleWidth = 1250;
 			var svgTitleContainer = d3.select("body").append("svg")
@@ -275,18 +276,27 @@
                 .attr("font-family", "sans-serif") 
                 .attr("font-size", "12px") 
                 .attr("fill", "grey")
-                .attr("y", svgNotesHeight/2 )
+                .attr("y", svgNotesHeight - 40 )
                 .attr("text-anchor", "right")
-                .text(visDataNotes_1) ;
+                .text(visDataNotes_3) ;
 
             var ourNotesText_2 = svgNotesContainer
                 .append("text")
                 .attr("font-family", "sans-serif") 
                 .attr("font-size", "12px") 
                 .attr("fill", "grey")
-                .attr("y", svgNotesHeight - 10 )
+                .attr("y", svgNotesHeight - 20 )
                 .attr("text-anchor", "right")
-                .text(visDataNotes_2) ;
+                .text(visDataNotes_1) ;
+
+            var ourNotesText_3 = svgNotesContainer
+                .append("text")
+                .attr("font-family", "sans-serif") 
+                .attr("font-size", "12px") 
+                .attr("fill", "grey")
+                .attr("y", svgNotesHeight - 5 )
+                .attr("text-anchor", "right")
+                .text(visDataNotes_2) ;    
                 
                 
 
